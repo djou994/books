@@ -1,0 +1,15 @@
+<div>
+  <h2>Product Add</h2>
+  <div>
+    <label>Book code:
+      <input [(ngModel)]="productData.code" placeholder="code"/>
+    </label><br>
+    <label>Book tittle:
+      <input [(ngModel)]="productData.title" placeholder="Tittle"/>
+    </label><br>
+    <label>Book author:
+      <input [(ngModel)]="productData.author" placeholder="Author"/>
+    </label><br>
+  </div>
+  <button (click)="addProduct()">Save</button>
+</div>

@@ -1,0 +1,17 @@
+<h2>Books list</h2>
+
+<div>
+  <button (click)="add()">
+    Add
+  </button>
+</div>
+
+<ul class="books">
+  <li *ngFor="let p of books; let i=index;">
+    <a routerLink="/books/{{p._id}}">
+      <span class="badge">{{i+1}}</span> ´{{p.title}} {{p.author}}´
+    </a>
+    <button class="delete" title="delete book"
+            (click)="delete(p._id)">x</button>
+  </li>
+</ul>
