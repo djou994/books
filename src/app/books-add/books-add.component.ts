@@ -18,7 +18,7 @@ export class BooksAddComponent implements OnInit {
 
   addProduct() {
     this.rest.addProduto(this.productData).subscribe((result) => {
-      this.router.navigate(['/' + result._id]);
+      this.router.navigate(['books/' + result._id]);
     }, (err) => {
       console.log(err);
     });

@@ -26,4 +26,10 @@ export class BooksListComponent implements OnInit {
   add() {
     this.router.navigate(['/books-add']);
   }
+
+  delete(id) {
+    this.rest.deleteProduto(id).subscribe( () => {
+      window.location.reload();
+    });
+  }
 }

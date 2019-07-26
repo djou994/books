@@ -48,7 +48,7 @@ export class ApiService {
   }
 
   deleteProduto(id): Observable<Book> {
-    const url = `${apiUrl}/delete/${id}`;
+    const url = `${apiUrl}/${id}`;
 
     return this.http.delete<Book>(url, httpOptions).pipe(
       tap(_ => console.log(`remove o book com id=${id}`)),

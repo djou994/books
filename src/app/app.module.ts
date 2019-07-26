@@ -4,7 +4,6 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BooksListComponent} from './books-list/books-list.component';
-import {BooksDetailComponent} from './books-detail/books-detail.component';
 import {BooksEditComponent} from './books-edit/books-edit.component';
 import {BooksAddComponent} from './books-add/books-add.component';
 import {RouterModule, Routes} from '@angular/router';
@@ -18,17 +17,12 @@ const appRoutes: Routes = [
     data: {title: 'Books List'}
   },
   {
-    path: 'books/:id',
-    component: BooksDetailComponent,
-    data: { title: 'Books details' }
-  },
-  {
     path: 'books-add',
     component: BooksAddComponent,
     data: { title: 'Product Add' }
   },
   {
-    path: 'books/edit/:id',
+    path: 'books/:id',
     component: BooksEditComponent,
     data: { title: 'Product Edit' }
   },
@@ -38,7 +32,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     BooksListComponent,
-    BooksDetailComponent,
     BooksEditComponent,
     BooksAddComponent,
     BooksListComponent
